@@ -12,6 +12,7 @@ ARG DEV=false
 RUN python -m venv /py 
 RUN /py/bin/pip install --upgrade pip
 RUN /py/bin/pip install -r /tmp/requirements.txt
+RUN /py/bin/pip install -r /tmp/requirements.dev.txt
 RUN rm -rf /tmp
 RUN adduser --disabled-password --no-create-home django-user
 
